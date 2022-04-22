@@ -1,0 +1,44 @@
+{
+  "name": "@znetstar/president-data",
+  "version": "1.0.0",
+  "description": "Data on US Presidents for use as sample data in other projects",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dailynodemodule/emperor-data"
+  },
+  "scripts": {
+    "build": "node src/build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "contributors": [
+    {
+      "name": "Zachary R.T. Boyd",
+      "email": "zachary@zacharyboyd.nyc",
+      "url": "https://zacharyboyd.nyc"
+    },
+    {
+      "name": "Etomon Team",
+      "email": "open-source@etomon.com",
+      "url": "https://etomon.com"
+    }
+  ],
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@znetstar/wiki-dummy-data": "^1.0.8"
+  },
+  "files": [
+    "src/index.js",
+    "src/install.js",
+    "data/*/*",
+    "LICENSE.txt",
+    ".gitignore",
+    "README.md"
+  ],
+  "dependencies": {
+    "@znetstar/encode-tools": "^1.5.0",
+    "chance": "^1.1.7",
+    "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21"
+  }
+}
