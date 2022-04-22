@@ -36,7 +36,7 @@ const chance = require('chance')();
         record.pageId.replace(/[.]/i, '').replace(/\s/i, '-').toLowerCase()+'.msgpack'
       );
 
-      if (await fs.pathExists(recPath) || record.data.title.indexOf('Presidency of') !== -1  || record.data.title.indexOf('Timeline of') !== -1)
+      if (!record.data.blobs?.mainImage?.contentType || record.data.blobs.mainImage.contentType.indexOf('image/') === -1 || await fs.pathExists(recPath) || record.data.title.indexOf('Presidency of') !== -1  || record.data.title.indexOf('Timeline of') !== -1)
         continue;
 
       let buf = await record.serialize();
